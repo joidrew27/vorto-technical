@@ -6,12 +6,12 @@ import java.util.*;
 public class VehicleRoutingProblem {
     public static void main(String[] args) {
 
-//        if (args.length != 1) {
-//            System.out.println("Usage: java VRPSolver <input_file_path>");
-//            System.exit(1);
-//        }
-//        String inputFilePath = args[0];
-        String inputFilePath = "/Users/joidrew27/IdeaProjects/takehomes/vorto-technical/src/input.txt";
+        if (args.length != 1) {
+            System.out.println("Usage: java VRPSolver <input_file_path>");
+            System.exit(1);
+        }
+        String inputFilePath = args[0];
+//        String inputFilePath = "/Users/joidrew27/IdeaProjects/takehomes/vorto-technical/src/input.txt";
 
         // Read the content of the file
         String content;
@@ -54,7 +54,7 @@ public class VehicleRoutingProblem {
                 pickupDropoff[1] = Double.parseDouble(pickup.split(",")[1]);
                 pickupDropoff[2] = Double.parseDouble(dropoff.split(",")[0]);
                 pickupDropoff[3] = Double.parseDouble(dropoff.split(",")[1]);
-                System.out.println(pickupDropoff[0] + "," + pickupDropoff[1] +"," + pickupDropoff[2] +"," + pickupDropoff[3]);
+//                System.out.println(pickupDropoff[0] + "," + pickupDropoff[1] +"," + pickupDropoff[2] +"," + pickupDropoff[3]);
                 inputs.add(pickupDropoff);
             }
         } catch (Exception e) {
