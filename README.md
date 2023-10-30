@@ -1,4 +1,16 @@
 # vorto-technical
+'''
+java VehicleRoutingProblem.java ./tests/problem1.txt
+'''
+
+comment back line 138 to calculate total cost
+'''
+chmod +x ./script.sh
+./script.sh
+'''
+Results will be stored in cost.txt (individual) and result.txt (mean)
+
+P.s.: improvements
 test 0 - start
 35129.708293083015
 35129.708293083015
