@@ -56,7 +56,7 @@ public class VehicleRoutingProblem {
         // System.out.println(content);
         List<double[]> inputs = parseInput(content);
         List<List<Integer>> res = vehicleRoutingProblem(inputs);
-        // printResult(res);
+        printResult(res);
     }
 
     public static void printResult(List<List<Integer>> res) {
@@ -134,8 +134,8 @@ public class VehicleRoutingProblem {
             res.add(cur);
             totalTime += time;
         }
-        System.out.println((totalTime + res.size() * 500));
-        // System.out.println("Total cost = " + (totalTime + res.size() * 500) + ".");
+        // this line is calculating time
+        // System.out.println((totalTime + res.size() * 500));
         return res;
     }
 

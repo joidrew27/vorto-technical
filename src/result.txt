@@ -1,0 +1,2 @@
+test 10 - half-size extra check
+32108.899940817406
