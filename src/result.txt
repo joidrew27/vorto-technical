@@ -1,2 +1,2 @@
-test 10 - half-size extra check
-32108.899940817406
+corrected - half size extra check
+36755.858806822194
