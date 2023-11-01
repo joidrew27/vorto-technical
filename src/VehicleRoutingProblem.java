@@ -10,16 +10,16 @@ public class VehicleRoutingProblem {
             System.exit(1);
         }
         String inputFilePath = args[0];
-        boolean printResult = false;
-        boolean printCost = true;
+        boolean printResult = true;
+        boolean printCost = false;
         if(args.length > 1){
-            if(args[1].equals("result")){
-                printResult = true;
+            if(args[1].equals("cost")){
+                printCost= true;
             }
         }
         if(args.length > 2){
             if(args[2].equals("only")){
-                printCost = false;
+                printResult = false;
             }
         }
         // Read the content of the file
@@ -49,7 +49,7 @@ public class VehicleRoutingProblem {
                     System.out.print(", ");
                 }
             }
-            System.out.println("]");
+            System.out.print("]\n");
         }
     }
 
@@ -119,7 +119,7 @@ public class VehicleRoutingProblem {
             double extraTime = findextraTime(input.get(index)[2], input.get(index)[3], 
             input.get(nextIndex)[0], input.get(nextIndex)[1], input.get(nextIndex)[2], input.get(nextIndex)[3]);
             
-            while(time + extraTime <= 1200){
+            while(time + extraTime <= 720){
                 time += extraTime;
                 cur.add(nextIndex);
                 loadToDo.remove(0);
@@ -140,7 +140,7 @@ public class VehicleRoutingProblem {
                     int skipIndex = loadToDo.get(i);
                     extraTime = findextraTime(input.get(index)[2], input.get(index)[3], 
                     input.get(skipIndex)[0], input.get(skipIndex)[1], input.get(skipIndex)[2], input.get(skipIndex)[3]);
-                    if(time + extraTime <= 1200){
+                    if(time + extraTime <= 720){
                         time += extraTime;
                         cur.add(skipIndex);
                         loadToDo.remove(i);
