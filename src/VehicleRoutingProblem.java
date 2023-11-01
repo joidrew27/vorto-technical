@@ -135,7 +135,7 @@ public class VehicleRoutingProblem {
             sortOnDistance(input, loadToDo, input.get(index)[2], input.get(index)[3]);
             // check for second closest, see if it can fit in this car
             // for better run time, use i <= 1
-            for(int i = 1; i <= loadToDo.size() / 2 ; i ++){
+            for(int i = 1; i <= loadToDo.size() / 3 ; i ++){
                 if(loadToDo.size() > i){
                     int skipIndex = loadToDo.get(i);
                     extraTime = findextraTime(input.get(index)[2], input.get(index)[3], 
