@@ -150,6 +150,7 @@ public class VehicleRoutingProblem {
             }
             res.add(cur);
             totalTime += time;
+            sortOnDistance(input, loadToDo, 0, 0);
         }
         if(printCost){
             System.out.println((totalTime + res.size() * 500)); // cost = time + 500 * trucks
